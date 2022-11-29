@@ -20,7 +20,7 @@
     harbor_deployed_name: harbor
 
     # Database name and IP
-    db_host_name: 
+    db_host_name: 130.246.214.146
     db_user_name: postgres
 
     # Name of the secret created 

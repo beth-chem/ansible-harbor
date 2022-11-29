@@ -6,11 +6,11 @@
 #       kind: Secret
 #       type: Opaque             
 #       metadata:
-#         name: "{{ secret_name }}"
+#         name: secret-redis  # cannot put secret name again, reserved for TLS 
 #         namespace: "{{ harbor_namespace }}"     
 #       data:
-#         username: "{{ 'REDIS_PASSWORD' | b64encode }}"
-#         password: "{{ lookup('env', 'REDIS_PASSWORD') | b64encode }}"
+#         username: REDIS_PASSWORD # "{{ 'REDIS_PASSWORD' | b64encode }}"
+#         #password: "{{ lookup('env', 'REDIS_PASSWORD') | b64encode }}"
 
 - name:  Template a file to /tmp/config.yaml
   ansible.builtin.template:
